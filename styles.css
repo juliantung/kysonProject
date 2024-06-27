@@ -1,0 +1,355 @@
+/* Common */
+@keyframes openForm {
+  0% {
+    width: 64px;
+    height: 64px;
+  }
+  50% {
+    width: 320px;
+    height: 64px;
+  }
+  100% {
+    width: 320px;
+    height: 380px;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  outline: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+  /* to be changed */
+  background-image: url('kysonfinalBG.jpeg');
+  /* This is the company logo */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.download-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* New button styles */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+span.download-button-container {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+
+span.download-button-container a {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+span.download-button-container a:before,
+span.download-button-container a:after {
+  position: absolute;
+  content: "Download Catalogue";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+span.download-button-container a:before {
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+span.download-button-container a:after {
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+span.download-button-container a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.container {
+  width: 400px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.star-rating {
+  font-size: 0;
+}
+
+.star {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.star.highlighted {
+  color: gold;
+}
+
+.form {
+  display: none;
+  width: 64px;
+  height: 64px;
+  background: black;
+  /* To be changed */
+  border: 6px solid black;
+  /*To be changed */
+  box-shadow: 0px 10px 20px -5px rgba(0,0,0,.3);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.form.active {
+  display: block;
+  padding: 24px;
+  background: black;
+  /* To be changed */
+  border: 6px solid white;
+  box-shadow: 0px 30px 20px -20px rgba(0,0,0,.3);
+  overflow: hidden;
+  width: 320px;
+  height: 380px;
+  -webkit-animation: openForm 1.4s;
+  -webkit-animation-timing-function: cubic-bezier(.9,.1,.1,.9);
+  animation: openForm 1.4s;
+  animation-timing-function: cubic-bezier(.9,.1,.1,.9);
+}
+
+.form.active * {
+  top: 0;
+  opacity: 1;
+}
+
+.form.active::after,
+.form.active::before {
+  opacity: 0;
+}
+
+.submit {
+  top: 0;
+  opacity: 1;
+  width: 160px;
+  padding: 8px;
+  text-align: center;
+  margin: 24px auto 0 auto;
+  background: #6fb07f;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  box-shadow: 0px 6px 10px -4px rgba(0,0,0,.3), 0px 1px 0px rgba(255,255,255,.5) inset, 0px 0px 0px rgba(0,0,0,.5) inset;
+  transition: all 1.1s 1s ease;
+}
+
+input, textarea {
+  top: 0;
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background: #fefefe;
+  margin: 12px 0 0 0;
+  font-style: italic;
+  border: 2px solid #bbb;
+}
+
+input:nth-child(1) {
+  transition: all .5s 1s ease;
+}
+
+input:nth-child(2) {
+  transition: all .7s 1s ease;
+}
+
+textarea {
+  top: 0;
+  opacity: 1;
+  max-height: 100px;
+  transition: all .9s 1s ease;
+}
+
+h1 {
+  top: 0;
+  opacity: 1;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 32px;
+  transition: all .3s 1s ease;
+}
+
+#pageTitle {
+  color: black;
+}
+
+.form::before,
+.form::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  opacity: 1;
+  left: 10px;
+  z-index: 100;
+  transition: all .1s linear;
+  -webkit-transform: scale(.9999,.9999);
+  transform: scale(.9999,.9999);
+}
+
+.form::before {
+  top: 15px;
+  transform: perspective(1000) rotateX(0deg);
+  transform-origin: 50% 0;
+  border-top: 11px solid #fff;
+  border-right: 16px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 16px solid transparent;
+}
+
+.form::after {
+  top: 17px;
+  border-top: 11px solid transparent;
+  border-right: 16px solid #fff;
+  border-bottom: 11px solid #fff;
+  border-left: 16px solid #fff;
+}
+
+.form:hover::before {
+  transform: perspective(1000) rotateX(180deg);
+  transform-origin: 50% 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.social-media-buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.social-media-buttons a {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.social-media-buttons img {
+  width: 24px;
+  height: 24px;
+}
+
+.ok_message {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px; /* Adjusted for new width */
+  margin-top: -31px; /* Adjusted for height */
+  width: 300px; /* Increased width to accommodate logo and text */
+  height: 62px;
+  border-radius: 31px;
+  background: whitesmoke;
+  z-index: 100;
+  -webkit-transform: scale(0,0) rotate(-90deg);
+  transform: scale(0,0) rotate(-90deg);
+  transition: all .5s .3s cubic-bezier(.9,.1,.1,.9);
+  line-height: 64px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ok_message a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.whatsapp-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+
+
+
+
+
+
+.ok_message span {
+  font-size: 16px;
+  color: white;
+  opacity: 0;
+  -webkit-transform: scale(.2,.2);
+  transform: scale(.2,.2);
+  transition: all .6s .4s ease;
+}
+
+.ok_message.active {
+  width: 320px;
+  margin-left: -160px;
+  -webkit-transform: scale(1,1) rotate(0deg);
+  transform: scale(1,1) rotate(0deg);
+}
+
+.ok_message.active span {
+  opacity: 1;
+  -webkit-transform: scale(1,1);
+  transform: scale(1,1);
+  left: 0px;
+}
+
+
+
+  
+
+  
+
+

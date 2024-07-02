@@ -33,9 +33,9 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: whitesmoke;
+  background-color: #FFFFFF;
   /* to be changed */
-  background-image: url('kysonfinalBG.jpeg');
+  background-image: url('kysonHope.jpg');
   /* This is the company logo */
   background-size: contain;
   background-repeat: no-repeat;
@@ -50,8 +50,8 @@ body {
 
 .download-container {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  bottom: 10px;
+  align-items: center;
 }
 
 /* New button styles */
@@ -105,11 +105,12 @@ span.download-button-container a:hover {
 }
 
 .container {
-  width: 400px;
+  width: 300px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
@@ -149,6 +150,7 @@ h1 {
   background: black;
   /* To be changed */
   border: 6px solid white;
+  
   box-shadow: 0px 30px 20px -20px rgba(0,0,0,.3);
   overflow: hidden;
   width: 320px;
@@ -176,6 +178,7 @@ h1 {
   padding: 8px;
   text-align: center;
   margin: 24px auto 0 auto;
+  margin-top: 5%;
   background: #6fb07f;
   cursor: pointer;
   text-transform: uppercase;
@@ -192,6 +195,7 @@ input, textarea {
   padding: 10px;
   background: #fefefe;
   margin: 12px 0 0 0;
+  margin-top: 5%;
   font-style: italic;
   border: 2px solid #bbb;
 }
@@ -268,8 +272,8 @@ body {
 
 .social-media-buttons {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  align-items: center;
 }
 
 .social-media-buttons a {
@@ -291,7 +295,7 @@ body {
   width: 300px; /* Increased width to accommodate logo and text */
   height: 62px;
   border-radius: 31px;
-  background: whitesmoke;
+  background: #FFFFFF;
   z-index: 100;
   -webkit-transform: scale(0,0) rotate(-90deg);
   transform: scale(0,0) rotate(-90deg);

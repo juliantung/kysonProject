@@ -50,10 +50,11 @@ body {
 
 .download-container {
   position: absolute;
-  bottom: 10px;
+  top: 10px;
+  left: 10px;
   align-items: center;
 }
-
+/* Changed This */
 /* New button styles */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
 
@@ -78,7 +79,7 @@ span.download-button-container a {
 span.download-button-container a:before,
 span.download-button-container a:after {
   position: absolute;
-  content: "Download Catalogue";
+  content: "View Shop";
   height: 55px;
   width: 180px;
   display: flex;
@@ -273,6 +274,7 @@ body {
 .social-media-buttons {
   position: absolute;
   top: 15px;
+  right: 15px;
   align-items: center;
 }
 
